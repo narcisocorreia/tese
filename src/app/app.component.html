@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Create Your Contract</h1>
+  <div class="list">
+    <h2>Contracts List</h2>
+
+    <mat-list role="list">
+      <mat-list-item *ngFor="let item of interfacesList" role="listitem">{{item}}</mat-list-item>
+
+    </mat-list>
+  </div>
+  <div class="create">
+    <h2>Create Your Contracts</h2>
+    <div class="create-interface_container">
+      <button *ngIf="!creating; else creatingTemplate" (click)="setCreatingStatus()" mat-fab color="accent"
+        aria-label="Example icon button with a home icon">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #creatingTemplate>
+  <div>
+
+  </div>
+</ng-template>
